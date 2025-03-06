@@ -1,0 +1,71 @@
+@use "sass:list";
+
+// Lista de colores para las filas de la tabla
+$colores: #00ff00, #ff0000, #ff00ff, #00ffff, #ffff00, #888377, #ffa500;
+
+// Estilos generales de la tabla
+table {
+  width: 50%;
+  border-collapse: collapse;
+  text-align: center;
+  font-weight: bold;
+
+  th, td {
+    border: 2px solid black;
+    padding: 10px;
+    color: #54686d;
+    font: 1em sans-serif;
+  }
+}
+
+.izquierda {
+  text-align: left;
+}
+
+.derecha {
+  text-align: right;
+}
+
+
+tr {
+  @for $i from 1 through list.length($colores) {
+    &:nth-child(#{$i}) { 
+      background-color: list.nth($colores, $i);
+    }
+  }
+}
+
+
+$tamanos: (
+  h1: 32px,
+  h2: 28px,
+  h3: 24px,
+  h4: 20px,
+  h5: 18px,
+  h6: 16px
+);
+
+@each $elemento, $size in $tamanos {
+  #{$elemento} {
+    font-size: $size;
+  }
+}
+
+
+@function calcularAnchura($base, $factor) {
+  @return $base * $factor;
+}
+
+
+.contenedor {
+  width: calcularAnchura(100px, 3); 
+  margin: auto;
+
+  @media (max-width: 768px) {
+    width: calcularAnchura(100px, 2);
+  }
+
+  @media (max-width: 480px) {
+    width: calcularAnchura(100px, 1.5);
+  }
+}
