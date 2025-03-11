@@ -1,0 +1,6 @@
+@use "sass:list";
+
+
+@function calcularAnchura($base, $factor) {
+    @return $base * $factor;
+  }

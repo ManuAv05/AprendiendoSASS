@@ -1,0 +1,104 @@
+tr:nth-child(1) {
+  background-color: #00ff00;
+}
+tr:nth-child(2) {
+  background-color: #ff0000;
+}
+tr:nth-child(3) {
+  background-color: #ff00ff;
+}
+tr:nth-child(4) {
+  background-color: #00ffff;
+}
+tr:nth-child(5) {
+  background-color: #ffff00;
+}
+tr:nth-child(6) {
+  background-color: #888377;
+}
+tr:nth-child(7) {
+  background-color: #ffa500;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+h5 {
+  font-size: 18px;
+}
+
+h6 {
+  font-size: 16px;
+}
+
+.menu {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  padding: 10px;
+  text-align: center;
+  z-index: 1000;
+  top: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: wheat;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 20px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.izquierda {
+  text-align: left;
+}
+
+.derecha {
+  text-align: right;
+}
+
+#experiencia {
+  margin-top: 120px;
+}
+
+/*# sourceMappingURL=cv.css.map */

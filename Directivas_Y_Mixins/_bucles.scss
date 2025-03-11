@@ -1,0 +1,15 @@
+@use "sass:list";
+@use 'variables' as v;
+tr{
+@for $i from 1 through list.length(v.$colores) {
+    &:nth-child(#{$i}) { 
+      background-color: list.nth(v.$colores, $i);
+    }
+  }
+}
+
+@each $elemento, $size in v.$tamanos {
+    #{$elemento} {
+        font-size: $size;
+    }
+}
