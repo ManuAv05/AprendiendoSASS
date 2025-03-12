@@ -3,13 +3,13 @@
  * @description Estilos para el Currículum Vitae con variables y mixins.
  */
 
-// Variables
+/// Variables
 $primary-color: #3498DB;
 $secondary-color: #1b2a2d;
 $text-color: #333;
 $font-stack: Arial, sans-serif;
 
-// Mixins
+///  Mixins
 @mixin flex-center {
     display: flex;
     justify-content: center;
@@ -20,14 +20,14 @@ $font-stack: Arial, sans-serif;
     box-shadow: 0px 0px $intensity rgba(0, 0, 0, 0.1);
 }
 
-// Estilos generales
+/// Estilos generales
 body {
     font-family: $font-stack;
     margin: 0;
     padding: 20px;
     background-color: $secondary-color;
 }
-//Estilo de el contenedor principal
+///Estilo de el contenedor principal
 .wrapper {
     max-width: 800px;
     margin: auto;
@@ -35,17 +35,17 @@ body {
     padding: 20px;
     @include box-shadow(10px);
 }
-//Aqui vamos a usar las variables para darle estilo a los titulos de la pagina
+///Aqui vamos a usar las variables para darle estilo a los titulos de la pagina
 h1, h2 {
     color: $secondary-color;
 }
-//Estilo de las secciones
+///Estilo de las secciones
 .section {
     margin-bottom: 20px;
     border-bottom: 2px solid $primary-color
 }
-//Estilo del nav con el mixin flex-center para centrar los elementos y darle estilo
-//con el color de la variable primary-color
+///Estilo del nav con el mixin flex-center para centrar los elementos y darle estilo
+///con el color de la variable primary-color
 .nav {
     @include flex-center;
     flex-direction: column;
